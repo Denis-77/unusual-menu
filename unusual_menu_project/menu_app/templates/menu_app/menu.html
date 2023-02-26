@@ -1,0 +1,8 @@
+<ul style="display: inline-block" class="menu">
+  {% for menu in menu_items %}
+    <li style="margin-left: calc(40px * {{ menu.level }});{% if menu.url == category %} border: 1px solid red;{% endif %}">
+      <a href="/{{ menu.full_url }}">{{ menu.name }}</a>
+    </li>
+  {% empty %}
+  {% endfor %}
+</ul>
